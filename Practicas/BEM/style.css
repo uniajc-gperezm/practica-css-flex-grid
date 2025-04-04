@@ -1,0 +1,83 @@
+/* Basic body styling (optional) */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+/* --- BLOCK --- */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; /* Keep rounded corners with image */
+  margin: 20px;
+  width: 250px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  display: flex; /* Use flexbox for layout inside the card */
+  align-items: center; /* Vertically center items */
+}
+
+/* --- ELEMENTS --- */
+.card__image {
+  /* Styles for the image element within the card block */
+  margin: 15px;
+  border-radius: 50%; /* Make image circular */
+  width: 80px;  /* Fixed size */
+  height: 80px; /* Fixed size */
+}
+
+.card__content {
+  /* Styles for the content wrapper element */
+  padding: 0 15px 15px 0; /* Padding around text content, none on left */
+  flex-grow: 1; /* Allow content area to take remaining space */
+}
+
+.card__title {
+  /* Styles for the title element */
+  margin: 10px 0 5px 0; /* Adjust spacing */
+  font-size: 1.2em;
+  color: #333;
+}
+
+.card__description {
+  /* Styles for the description element */
+  margin: 0 0 15px 0; /* Adjust spacing */
+  font-size: 0.9em;
+  color: #777;
+}
+
+.card__button {
+  /* Styles for the button element */
+  padding: 8px 15px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s, color 0.2s; /* Smooth hover effect */
+}
+
+.card__button:hover {
+  background-color: #f0f8ff; /* Light blue on hover */
+}
+
+/* --- MODIFIERS --- */
+
+/* Modifier for the BLOCK 'card' */
+.card--featured {
+  /* Changes for a featured card */
+  border-left: 5px solid #ffc107; /* Add a yellow left border */
+  background-color: #fffbeb; /* Slightly yellowish background */
+}
+
+/* Modifier for the ELEMENT 'card__button' */
+.card__button--primary {
+  /* Changes for a primary button */
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+}
+
+.card__button--primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
